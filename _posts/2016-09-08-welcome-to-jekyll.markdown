@@ -18,6 +18,14 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
+{% for repository in site.github.public_repositories %}
+  * [{{ repository.name }}]({{ repository.html_url }}): {{ repository.has_pages }}
+{% endfor %}
+
+========
+
+
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
